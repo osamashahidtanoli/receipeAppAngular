@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img src="" alt="" class="img-responsive" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ receipe.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group" appDropdown>
+      <button class="btn btn-primary dropdown-toggle">Manage Receipe</button>
+      <ul class="dropdown-menu">
+        <li><a (click)="AddIngredientToShoppoingList()" [ngStyle]="{ cursor: 'pointer' }">To Shopping List</a></li>
+        <li><a href="#">Edit Receipe</a></li>
+        <li><a href="#">Delete Receipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ receipe.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let receipeIngredient of receipe.ingredients">
+        {{ receipeIngredient.name }} - {{ receipeIngredient.amount }}
+      </li>
+    </ul>
+  </div>
+</div>
