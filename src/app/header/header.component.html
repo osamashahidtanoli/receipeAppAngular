@@ -14,6 +14,7 @@
         <li class="dropdown" appDropdown *ngIf="isAuthenticated">
           <a class="dropdown-toggle" role="button">Manage</a>
           <ul class="dropdown-menu">
+            <li><a (click)="onLogout()">Logout</a></li>
             <li><a (click)="onSave()">Saving</a></li>
             <li><a (click)="onFetch()">Fetching</a></li>
           </ul>

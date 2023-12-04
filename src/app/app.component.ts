@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataStorgaeService } from './shared/datastorage.service';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +10,12 @@ export class AppComponent implements OnInit {
   title = 'receipe-app';
   loaded = 'receipe';
 
-  constructor(private dataStorage: DataStorgaeService) {
+  constructor(private authService: AuthService) {
 
   }
 
   ngOnInit(): void {
-    this.dataStorage.fetchReceipes().subscribe();
+    this.authService.autoLogin();
   }
 
   onNavigate(feature: string) {
