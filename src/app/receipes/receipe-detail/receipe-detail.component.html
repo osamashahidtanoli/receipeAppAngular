@@ -14,8 +14,8 @@
       <button class="btn btn-primary dropdown-toggle">Manage Receipe</button>
       <ul class="dropdown-menu">
         <li><a (click)="AddIngredientToShoppoingList()" [ngStyle]="{ cursor: 'pointer' }">To Shopping List</a></li>
-        <li><a href="#">Edit Receipe</a></li>
-        <li><a href="#">Delete Receipe</a></li>
+        <li><a (click)="onNavigate()">Edit Receipe</a></li>
+        <li><a (click)="onDelete()">Delete Receipe</a></li>
       </ul>
     </div>
   </div>

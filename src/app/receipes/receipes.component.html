@@ -3,9 +3,6 @@
     <app-receipe-list></app-receipe-list>
   </div>
   <div class="col-md-7">
-    <app-receipe-detail *ngIf="receipe; else noDataText" [receipe]="receipe"></app-receipe-detail>
-    <ng-template #noDataText>
-      <p>No Data Available</p>
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>

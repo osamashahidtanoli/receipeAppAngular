@@ -9,12 +9,9 @@ import { ReceipeService } from '../../receipe.service';
 })
 export class ReceipeItemComponent {
   @Input() receipe: Receipe
+  @Input() index: number;
 
   constructor(private receipeService: ReceipeService) {
 
-  }
-
-  onReceipeSelected() {
-    this.receipeService.selectedReceipe.emit(this.receipe);
   }
 }
